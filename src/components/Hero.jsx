@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { Gift, Sparkles } from 'lucide-react';
+import { ArrowDown, Gift, Sparkles } from 'lucide-react';
 
-const confettiPieces = Array.from({ length: 34 }, (_, index) => ({
+const sparks = Array.from({ length: 42 }, (_, index) => ({
   id: index,
-  left: `${(index * 29) % 100}%`,
-  delay: `${(index % 9) * 0.35}s`,
-  duration: `${5 + (index % 6)}s`,
-  color: ['#e11d48', '#f97316', '#0f766e', '#facc15', '#be185d'][index % 5],
+  left: `${(index * 37) % 100}%`,
+  top: `${(index * 19) % 100}%`,
+  size: 5 + (index % 5) * 2,
+  delay: `${(index % 10) * 0.22}s`,
+  color: ['#e85d75', '#f2b84b', '#3f7c6b', '#7f1d4e'][index % 4],
 }));
 
 export default function Hero() {
@@ -15,91 +16,112 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden px-5 py-16 sm:px-8 lg:px-12">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(244,63,94,0.22),_transparent_34%),linear-gradient(135deg,_#fff7ed_0%,_#fff1f2_48%,_#f0fdfa_100%)]" />
+    <section id="top" className="relative min-h-screen overflow-hidden px-5 pb-16 pt-28 sm:px-8 lg:px-12">
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,_#fffaf2_0%,_#fff4ef_38%,_#dff3e4_100%)]" />
+      <div className="noise-overlay absolute inset-0 opacity-[0.08]" />
 
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {confettiPieces.map((piece) => (
-          <span
-            key={piece.id}
-            className="absolute -top-8 h-3 w-2 rounded-sm opacity-80"
+      <div className="pointer-events-none absolute inset-0">
+        {sparks.map((spark) => (
+          <motion.span
+            key={spark.id}
+            className="absolute rounded-full"
             style={{
-              left: piece.left,
-              backgroundColor: piece.color,
-              animation: `confettiFall ${piece.duration} linear ${piece.delay} infinite`,
+              left: spark.left,
+              top: spark.top,
+              width: spark.size,
+              height: spark.size,
+              backgroundColor: spark.color,
             }}
+            animate={{ y: [-10, 14, -10], opacity: [0.15, 0.8, 0.15], scale: [1, 1.4, 1] }}
+            transition={{ duration: 4.5 + (spark.id % 4), repeat: Infinity, delay: Number.parseFloat(spark.delay) }}
           />
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 34 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]"
-      >
-        <div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white/70 px-4 py-2 text-sm font-semibold text-berry shadow-sm backdrop-blur"
-          >
+      <div className="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 26 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: 'easeOut' }}
+          className="max-w-4xl"
+        >
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-plum/15 bg-white/70 px-4 py-2 text-sm font-extrabold text-plum shadow-soft backdrop-blur">
             <Sparkles size={17} />
-            Para Milena
-          </motion.div>
+            Presente digital
+          </div>
 
-          <h1 className="max-w-4xl font-display text-6xl font-extrabold leading-[0.95] text-rosewood sm:text-7xl lg:text-8xl">
-            Feliz Aniversário
+          <h1 className="font-display text-6xl font-black leading-[0.9] text-ink sm:text-7xl lg:text-8xl xl:text-9xl">
+            Feliz
+            <span className="block bg-[linear-gradient(90deg,_#7f1d4e,_#e85d75,_#f2b84b,_#7f1d4e)] bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">
+              Aniversário
+            </span>
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-rosewood/78 sm:text-xl">
-            Um web app feito para guardar memórias, fotos e uma mensagem especial
-            para celebrar a pessoa incrível que você é.
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72 sm:text-xl">
+            Um lugar bonito para celebrar a Milena com memórias, fotos e uma carta que
+            guarda carinho em cada detalhe.
           </p>
 
-          <motion.button
-            type="button"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={scrollToTimeline}
-            className="mt-10 inline-flex h-14 items-center gap-3 rounded-full bg-berry px-7 text-base font-bold text-white shadow-glow transition-colors hover:bg-rose-800 animate-pulseGlow"
-          >
-            <Gift size={20} />
-            Começar
-          </motion.button>
-        </div>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <motion.button
+              type="button"
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={scrollToTimeline}
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-ink px-7 text-base font-extrabold text-white shadow-halo transition hover:bg-plum animate-pulseGlow"
+            >
+              <Gift size={20} />
+              Começar
+            </motion.button>
 
-        <motion.div
-          initial={{ opacity: 0, rotate: -4, scale: 0.94 }}
-          animate={{ opacity: 1, rotate: 0, scale: 1 }}
-          transition={{ delay: 0.25, duration: 0.7, ease: 'easeOut' }}
-          className="relative mx-auto w-full max-w-md"
-        >
-          <div className="aspect-[4/5] overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-glow">
-            <img
-              src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=85"
-              alt="Celebração de aniversário com balões"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-7 -left-7 rounded-3xl bg-white px-6 py-5 shadow-soft">
-            <p className="text-sm font-semibold text-berry">Hoje é o seu dia</p>
-            <p className="mt-1 text-2xl font-black">Milena</p>
+            <a
+              href="#message"
+              className="inline-flex h-14 items-center justify-center gap-3 rounded-full border border-ink/15 bg-white/60 px-7 text-base font-extrabold text-ink shadow-soft backdrop-blur transition hover:border-plum/30 hover:text-plum"
+            >
+              <ArrowDown size={20} />
+              Ver carta
+            </a>
           </div>
         </motion.div>
-      </motion.div>
 
-      <style>{`
-        @keyframes confettiFall {
-          0% {
-            transform: translate3d(0, -10vh, 0) rotate(0deg);
-          }
-          100% {
-            transform: translate3d(18px, 112vh, 0) rotate(720deg);
-          }
-        }
-      `}</style>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94, rotate: 2 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ delay: 0.15, duration: 0.85, ease: 'easeOut' }}
+          className="relative mx-auto grid w-full max-w-xl grid-cols-[0.78fr_1fr] gap-4 sm:gap-5"
+        >
+          <motion.div
+            animate={{ y: [0, -14, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+            className="mt-16 overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-halo"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=85"
+              alt="Balões de aniversário em uma celebração"
+              className="h-full min-h-[360px] w-full object-cover"
+            />
+          </motion.div>
+
+          <div className="space-y-4 sm:space-y-5">
+            <div className="overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=85"
+                alt="Bolo de aniversário decorado"
+                className="h-56 w-full object-cover sm:h-64"
+              />
+            </div>
+            <div className="rounded-[2rem] bg-plum p-6 text-white shadow-crisp">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">
+                Hoje é dela
+              </p>
+              <p className="mt-2 font-display text-4xl font-black">Milena</p>
+              <p className="mt-3 leading-6 text-white/78">
+                Uma celebração feita para ficar na memória.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

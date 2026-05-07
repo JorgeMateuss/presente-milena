@@ -1,0 +1,83 @@
+[2m09:57:59[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./components/Dedication.jsx" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/src/App.jsx[39m:2:23
+[33m  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { Heart, Images, MapPinned, Music2, ScrollText, Sparkles } from "lucide-react";
+  3  |  import Dedication from "./components/Dedication.jsx";
+     |                          ^
+  4  |  import Gallery from "./components/Gallery.jsx";
+  5  |  import Hero from "./components/Hero.jsx";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42553:41)
+      at TransformPluginContext.error (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42550:16)
+      at normalizeUrl (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40529:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40648:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40575:7)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42348:18)
+      at async loadAndTransform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:35740:27)
+      at async viteTransformMiddleware (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:37264:24)
+[2m09:57:59[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./components/Dedication.jsx" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/src/App.jsx[39m:2:23
+[33m  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { Heart, Images, MapPinned, Music2, ScrollText, Sparkles } from "lucide-react";
+  3  |  import Dedication from "./components/Dedication.jsx";
+     |                          ^
+  4  |  import Gallery from "./components/Gallery.jsx";
+  5  |  import Hero from "./components/Hero.jsx";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42553:41)
+      at TransformPluginContext.error (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42550:16)
+      at normalizeUrl (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40529:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40648:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40575:7)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42348:18)
+      at async loadAndTransform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:35740:27)
+[2m09:57:59[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./components/Dedication.jsx" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/src/App.jsx[39m:2:23
+[33m  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { Heart, Images, MapPinned, Music2, ScrollText, Sparkles } from "lucide-react";
+  3  |  import Dedication from "./components/Dedication.jsx";
+     |                          ^
+  4  |  import Gallery from "./components/Gallery.jsx";
+  5  |  import Hero from "./components/Hero.jsx";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42553:41)
+      at TransformPluginContext.error (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42550:16)
+      at normalizeUrl (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40529:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40648:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40575:7)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42348:18)
+      at async loadAndTransform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:35740:27)
+[2m09:57:59[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./components/Dedication.jsx" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/src/App.jsx[39m:2:23
+[33m  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { Heart, Images, MapPinned, Music2, ScrollText, Sparkles } from "lucide-react";
+  3  |  import Dedication from "./components/Dedication.jsx";
+     |                          ^
+  4  |  import Gallery from "./components/Gallery.jsx";
+  5  |  import Hero from "./components/Hero.jsx";[39m
+      at TransformPluginContext._formatLog (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42553:41)
+      at TransformPluginContext.error (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42550:16)
+      at normalizeUrl (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40529:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40648:37
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:40575:7)
+      at async EnvironmentPluginContainer.transform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:42348:18)
+      at async loadAndTransform (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:35740:27)
+      at async viteTransformMiddleware (file:///C:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/node_modules/.pnpm/vite@6.4.2_jiti@1.21.7/node_modules/vite/dist/node/chunks/dep-Dq2t6Dq0.js:37264:24)
+[2m09:59:17[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./components/Dedication.jsx" from "src/App.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/Administrator/Documents/Codex/2026-05-07/atue-como-um-desenvolvedor-front-end/src/App.jsx[39m:2:23
+[33m  1  |  import { jsxDEV } from "react/jsx-dev-runtime";
+  2  |  import { Heart, Images, MapPinned, Music2, ScrollText, Sparkles } from "lucide-react";
+  3  |  import Dedication from "./components/Dedication.jsx";
+     |                          ^
+  4  |  import Gallery from "./components/Gallery.jsx";
+  5  |  import Hero from "./components/Hero.jsx";[39m

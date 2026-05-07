@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  color: #4c0519;
-  background: #fff7ed;
+  color: #211816;
+  background: #fffaf2;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,8 +28,17 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+  color: #fffaf2;
+  background: #7f1d4e;
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.22'/%3E%3C/svg%3E");
+}
+
 .perspective-card {
-  perspective: 1200px;
+  perspective: 1400px;
 }
 
 .message-card-inner {
