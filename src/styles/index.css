@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #4c0519;
+  background: #fff7ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.perspective-card {
+  perspective: 1200px;
+}
+
+.message-card-inner {
+  transform-style: preserve-3d;
+}
+
+.message-card-front,
+.message-card-back {
+  backface-visibility: hidden;
+}
+
+.message-card-back {
+  transform: rotateY(180deg);
+}
