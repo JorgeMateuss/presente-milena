@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
+import { Heart, RotateCcw } from 'lucide-react';
 
 export default function Dedication() {
+  const scrollToStart = () => {
+    document.getElementById('top')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <footer className="relative overflow-hidden bg-plum px-5 py-20 text-white sm:px-8 lg:px-12">
       <div className="noise-overlay absolute inset-0 opacity-[0.09]" />
@@ -26,6 +30,17 @@ export default function Dedication() {
           com tempo, cuidado e beleza.
         </p>
         <p className="mt-10 font-display text-3xl font-black">Com amor, de quem te ama.</p>
+
+        <motion.button
+          type="button"
+          onClick={scrollToStart}
+          whileHover={{ scale: 1.04, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="mt-10 inline-flex h-14 items-center justify-center gap-3 rounded-full bg-white px-7 text-base font-black text-plum shadow-halo transition hover:bg-marigold hover:text-ink"
+        >
+          <RotateCcw size={20} />
+          Rever desde o começo
+        </motion.button>
       </motion.div>
     </footer>
   );

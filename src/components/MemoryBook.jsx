@@ -40,7 +40,7 @@ export default function MemoryBook({ pages }) {
           transition={{ duration: 0.6 }}
           className="rounded-[2rem] border border-ink/10 bg-ivory p-5 shadow-halo sm:p-8"
         >
-          <div className="min-h-[330px] rounded-[1.5rem] border border-clay/15 bg-white p-7 shadow-crisp sm:p-10">
+          <div className="min-h-[330px] rounded-[1.5rem] border border-clay/15 bg-white p-5 shadow-crisp sm:p-10">
             <AnimatePresence mode="wait">
               <motion.article
                 key={page.title}
@@ -52,10 +52,10 @@ export default function MemoryBook({ pages }) {
                 <p className="text-sm font-black uppercase tracking-[0.22em] text-plum">
                   Página {pageIndex + 1} de {pages.length}
                 </p>
-                <h3 className="mt-8 font-display text-4xl font-black leading-tight text-ink sm:text-5xl">
+                <h3 className="mt-8 font-display text-3xl font-black leading-tight text-ink sm:text-5xl">
                   {page.title}
                 </h3>
-                <p className="mt-6 text-xl leading-9 text-ink/70">{page.body}</p>
+                <p className="mt-6 text-lg leading-8 text-ink/70 sm:text-xl sm:leading-9">{page.body}</p>
               </motion.article>
             </AnimatePresence>
           </div>

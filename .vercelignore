@@ -1,0 +1,6 @@
+node_modules
+dist
+android
+vite.out.log
+vite.err.log
+.git

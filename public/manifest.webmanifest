@@ -1,0 +1,19 @@
+{
+  "name": "Feliz Aniversario, Milena",
+  "short_name": "Milena",
+  "description": "Um presente de aniversario interativo feito com carinho para Milena.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffaf2",
+  "theme_color": "#7f1d4e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/milena-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

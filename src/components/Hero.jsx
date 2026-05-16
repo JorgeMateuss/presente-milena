@@ -11,8 +11,8 @@ const sparks = Array.from({ length: 42 }, (_, index) => ({
 }));
 
 export default function Hero() {
-  const scrollToTimeline = () => {
-    document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToFirstChapter = () => {
+    document.getElementById('playlist')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Hero() {
             Presente digital
           </div>
 
-          <h1 className="font-display text-6xl font-black leading-[0.9] text-ink sm:text-7xl lg:text-8xl xl:text-9xl">
+          <h1 className="font-display text-5xl font-black leading-[0.92] text-ink min-[380px]:text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
             Feliz
             <span className="block bg-[linear-gradient(90deg,_#7f1d4e,_#e85d75,_#f2b84b,_#7f1d4e)] bg-[length:200%_100%] bg-clip-text text-transparent animate-shimmer">
               Aniversário
@@ -62,12 +62,12 @@ export default function Hero() {
             guarda carinho em cada detalhe.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 min-[420px]:flex-row">
             <motion.button
               type="button"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              onClick={scrollToTimeline}
+              onClick={scrollToFirstChapter}
               className="inline-flex h-14 items-center justify-center gap-3 rounded-full bg-ink px-7 text-base font-extrabold text-white shadow-halo transition hover:bg-plum animate-pulseGlow"
             >
               <Gift size={20} />
@@ -88,33 +88,33 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94, rotate: 2 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: 0.15, duration: 0.85, ease: 'easeOut' }}
-          className="relative mx-auto grid w-full max-w-xl grid-cols-[0.78fr_1fr] gap-4 sm:gap-5"
+          className="relative mx-auto grid w-full max-w-xl grid-cols-[0.78fr_1fr] gap-3 min-[380px]:gap-4 sm:gap-5"
         >
           <motion.div
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-            className="mt-16 overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-halo"
+            className="mt-10 overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-halo min-[420px]:mt-16 sm:rounded-[2rem] sm:border-[10px]"
           >
             <img
               src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=900&q=85"
               alt="Balões de aniversário em uma celebração"
-              className="h-full min-h-[360px] w-full object-cover"
+              className="h-full min-h-[260px] w-full object-cover min-[420px]:min-h-[360px]"
             />
           </motion.div>
 
           <div className="space-y-4 sm:space-y-5">
-            <div className="overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-soft">
+            <div className="overflow-hidden rounded-[1.5rem] border-[8px] border-white bg-white shadow-soft sm:rounded-[2rem] sm:border-[10px]">
               <img
                 src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=85"
                 alt="Bolo de aniversário decorado"
-                className="h-56 w-full object-cover sm:h-64"
+                className="h-44 w-full object-cover min-[420px]:h-56 sm:h-64"
               />
             </div>
-            <div className="rounded-[2rem] bg-plum p-6 text-white shadow-crisp">
+            <div className="rounded-[1.5rem] bg-plum p-5 text-white shadow-crisp sm:rounded-[2rem] sm:p-6">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">
                 Hoje é dela
               </p>
-              <p className="mt-2 font-display text-4xl font-black">Milena</p>
+              <p className="mt-2 font-display text-3xl font-black sm:text-4xl">Milena</p>
               <p className="mt-3 leading-6 text-white/78">
                 Uma celebração feita para ficar na memória.
               </p>
